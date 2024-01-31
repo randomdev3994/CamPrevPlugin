@@ -1,5 +1,9 @@
 // Global vars
-var deferral, fs, elementtree, path;
+var deferral;
+var Q = ctx.require("q");
+var fs = ctx.require("fs");
+var path = ctx.require("path");
+var elementtree = ctx.require("elementtree");
 
 var disableAllowBackup = (function () {
 
@@ -75,10 +79,6 @@ var disableAllowBackup = (function () {
 })();
 
 module.exports = function (ctx) {
-    var Q = ctx.requireCordovaModule("q");
-    fs = ctx.requireCordovaModule("fs");
-    path = ctx.requireCordovaModule("path");
-    elementtree = ctx.requireCordovaModule("elementtree");
 
     deferral = Q.defer();
 
