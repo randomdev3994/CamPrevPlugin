@@ -1,9 +1,5 @@
 // Global vars
-var deferral;
-var Q = ctx.require("q");
-var fs = ctx.require("fs");
-var path = ctx.require("path");
-var elementtree = ctx.require("elementtree");
+var deferral, fs, path, elementtree;
 
 var disableAllowBackup = (function () {
 
@@ -79,6 +75,11 @@ var disableAllowBackup = (function () {
 })();
 
 module.exports = function (ctx) {
+
+    var Q = ctx.require("q");
+    fs = ctx.require("fs");
+    path = ctx.require("path");
+    elementtree = ctx.require("elementtree");
 
     deferral = Q.defer();
 
